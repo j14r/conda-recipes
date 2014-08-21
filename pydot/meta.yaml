@@ -1,0 +1,20 @@
+# ripped from https://binstar.org/mika-fischer/pydot
+package:
+    name: pydot
+    version: 1.0.28
+
+source:
+    fn: pydot-1.0.28.tar.gz
+    url: http://pydot.googlecode.com/files/pydot-1.0.28.tar.gz
+
+requirements:
+    build:
+        - python
+        - pyparsing
+    run:
+        - python
+        - pyparsing
+
+about:
+    home: http://code.google.com/p/pydot/
+    license: MIT

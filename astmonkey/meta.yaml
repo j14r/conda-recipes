@@ -1,0 +1,19 @@
+# ripped from https://binstar.org/auto/astmonkey
+package:
+  name: astmonkey
+  version: !!str 0.1.1
+
+requirements:
+  build:
+    - python
+    - pip
+    - pydot
+
+  run:
+    - python
+    - pydot
+
+about:
+  home: https://github.com/konradhalas/astmonkey
+  license: ache Software License
+  summary: astmonkey is a set of tools to play with Python AST.
