@@ -5,4 +5,5 @@
 
 ./configure --prefix=$PREFIX/cmu-sphinx
 make
+make test
 make install
