@@ -1,0 +1,20 @@
+package:
+  name: cmu-pocketsphinx
+  version: !!str 0.8
+
+source:
+  fn: pocketsphinx-0.8.tar.gz
+  url: http://cznic.dl.sourceforge.net/project/cmusphinx/pocketsphinx/0.8/pocketsphinx-0.8.tar.gz
+  md5: 9f6fb6277d57fb33d2c49d4184587d26
+
+requirements:
+  build:
+    - python
+    - cmu-sphinxbase
+  run:
+    - cmu-sphinxbase
+
+about:
+  home: http://cmusphinx.sourceforge.net/
+  license: BSD
+  summary: CMUSphinx is a speaker-independent large vocabulary continuous speech recognizer released under BSD style license. It is also a collection of open source tools and resources that allows researchers and developers to build speech recognition systems.
