@@ -1,35 +1,75 @@
-
 package:
-    name: gitpython
-    version: 0.3.2
+  name: gitpython
+  version: "0.3.6"
 
 source:
-    git_url: https://github.com/gitpython-developers/GitPython.git
-    git_tag: 0.3.2-RC1
-    #fn:
-    #url:
-    #md5:
+  fn: GitPython-0.3.6.tar.gz
+  url: https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.6.tar.gz
+  md5: 87404ab9e0fcee81e660e932b3d9f2c6
+#  patches:
+   # List any patch files here
+   # - fix.patch
 
-build:
-    number: 0
+# build:
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - gitpython = gitpython:main
+    #
+    # Would create an entry point called gitpython that calls gitpython.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
 
 requirements:
-    build:
-        - python
-        - distribute
-        - ez_setup
+  build:
+    - python
+    - setuptools
+    - gitdb >=0.6.4
 
-    run:
-        - python
+  run:
+    - python
+    - gitdb >=0.6.4
 
 test:
-    imports:
-        - git
+  requires:
+    - mock
+    - nose
 
-    #commands:
-    #    -
+  # Python imports
+  imports:
+    - git
+    - git.index
+    - git.objects
+    - git.objects.submodule
+    - git.refs
+    - git.repo
+    - git.test
+    - git.test.lib
+    - git.test.performance
+    #- gitpython
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
 
 about:
-    home: http://pythonhosted.org/GitPython/
-    license: New BSD License
+  home: https://github.com/gitpython-developers/GitPython
+  license: BSD License
+  summary: 'Python Git Library'
 
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
